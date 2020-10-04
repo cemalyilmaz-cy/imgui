@@ -7,10 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 file(GLOB SOURCES ./*.cpp)
 add_library(
-    ImGui STATIC
+    ImGui SHARED
     ${SOURCES}
 )
-message(${GLEW_INCLUDE_DIR})
+
 target_link_libraries(ImGui)
 target_include_directories(ImGui PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 
